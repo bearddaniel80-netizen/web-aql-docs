@@ -1,8 +1,6 @@
 from .security.api_key_check import verify_internal_key
 from .routers.run_process import render
-from .routers.examples import router as examples_router
-from .routers.scripts import router as scripts_router
-from .routers.sources import router as sources_router
+from .routers.main_router import api_router
 from .routers.minio import router as minio_router
 
 from pathlib import Path
@@ -29,9 +27,9 @@ app.add_middleware(
 # --------------------------------------------------
 
 app.include_router(minio_router)
-app.include_router(examples_router)
-app.include_router(scripts_router)
-app.include_router(sources_router)
+app.include_router(api_router("examples"))
+app.include_router(api_router("scripts"))
+app.include_router(api_router("sources"))
 
 @app.get("/health")
 async def health():
