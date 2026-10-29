@@ -1,21 +1,16 @@
-nav {
-  background: #333;
-  padding: 10px 20px;
-}
-
-nav ul {
+.app-layout {
   display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  gap: 24px;
+  min-height: 100vh;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+.app-navigation {
+  flex-shrink: 0;
+  padding: 16px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.app-content {
+  flex: 1;
+  padding: 24px;
+  min-width: 0;
 }
