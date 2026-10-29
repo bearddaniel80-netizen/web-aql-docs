@@ -1,6 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import DocumentationPage from "./components/container/DocPage";
+import Navigation from "./components/menu/nav/Navigation";
+import { navigationConfig } from "./navigation";
+
+ReactDOM.createRoot(
+  document.getElementById("nav")
+).render(
+  <React.StrictMode>
+    <Navigation model={navigationConfig}/>
+  </React.StrictMode>
+);
 
 ReactDOM.createRoot(
   document.getElementById("root")

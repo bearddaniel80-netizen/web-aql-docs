@@ -1,6 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import HtmlFragment from "./components/views/HtmlFragmentsView";
+import Navigation from "./components/menu/nav/Navigation";
+import { navigationConfig } from "./navigation";
+
+ReactDOM.createRoot(
+  document.getElementById("nav")
+).render(
+  <React.StrictMode>
+    <Navigation model={navigationConfig}/>
+  </React.StrictMode>
+);
 
 async function myList(endpoint) {
   const response = await fetch(endpoint);
