@@ -12,14 +12,14 @@ export default defineConfig({
   base: "/",
 
   build: {
-    outDir: "./www",
+    outDir: "wwwroot",
     emptyOutDir: true,
 
     rollupOptions: {
       input: {
         index: resolve(root, "index.html"),
         language: resolve(root, "language.html"),
-        sources: resolve(root, "sources.html")
+        sources: resolve(root, "sanmples.html")
       }
     }
   }
