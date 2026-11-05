@@ -19,7 +19,7 @@ export default defineConfig({
       input: {
         index: resolve(root, "index.html"),
         language: resolve(root, "language.html"),
-        sources: resolve(root, "sanmples.html")
+        samples: resolve(root, "samples.html")
       }
     }
   }
