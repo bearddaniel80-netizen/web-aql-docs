@@ -12,7 +12,7 @@ export default defineConfig({
   base: "/",
 
   build: {
-    outDir: "www",
+    outDir: "./www",
     emptyOutDir: true,
 
     rollupOptions: {
