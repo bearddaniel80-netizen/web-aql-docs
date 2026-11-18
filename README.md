@@ -11,6 +11,13 @@ Features
 
 ---
 
+## Dependencies
+
+- [Aegis Link](https://github.com/bearddaniel80-netizen/aegis-link.git)
+- [AQL Public](https://github.com/bearddaniel80-netizen/aql-public.git)
+
+---
+
 ## Endpoints
 These endpoint can also be reached with 
 ```bash
@@ -42,6 +49,19 @@ Shows `getting-started` and `query-langage` files.
 ---
 
 ## To run
+
+*Kubernetes*
+```bash
+# copy your real files over the placeholders first
+cp ./minio/init-minio.sh stack/files/init-minio.sh
+cp ./minio/policy.json   stack/files/policy.json
+
+helm install myapp ./stack \
+  --set minio.bucket=YOUR_BUCKET \
+  --set secrets.fastapiInternalKey=... \
+  --set secrets.minioAppUser=... --set secrets.minioAppPassword=... \
+  --set secrets.minioRootUser=... --set secrets.minioRootPassword=...
+```
 
 ### Start services
 ```bash
